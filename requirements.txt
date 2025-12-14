@@ -1,0 +1,28 @@
+# AgentForge Python Dependencies
+
+# Oumi Framework (REQUIRED for Iron Intelligence Award)
+oumi>=0.1.0
+
+# PyTorch and ML frameworks
+torch>=2.1.0
+transformers>=4.36.0
+accelerate>=0.25.0
+
+# Data processing
+pandas>=2.1.4
+numpy>=1.24.3
+
+# API clients
+requests>=2.31.0
+
+# GitHub API
+PyGithub>=2.1.1
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+tqdm>=4.66.1
+
+# Testing
+pytest>=7.4.3
+pytest-asyncio>=0.21.1
