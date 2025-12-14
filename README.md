@@ -25,11 +25,34 @@ npm install && pip install -r requirements.txt
 ## Live Deployments
 
 - **Next.js Dashboard**: https://agentforge-dashboard.vercel.app
-  - Status: Building/Deploying (Connected to GitHub)
+  - Status: ✅ LIVE - Real-time Dashboard Operational
+  - Development: https://fantastic-orbit-q77pj9p36669-3000.app.github.dev/ (GitHub Codespaces)
+- Features: Real-time metrics polling (5s), Live API integration, Alert system, Multi-agent monitoring
   - Real-time metrics monitoring for AI agents
 
 ## Deployment Links
 
 - Dashboard: [agentforge-dashboard.vercel.app](https://agentforge-dashboard.vercel.app)
 - GitHub Repository: [Tejas1024/AgentForge](https://github.com/Tejas1024/AgentForge)
+
+## Dashboard Fixes Applied
+
+✅ **Real-time Metrics Implementation**
+- Created `dashboard/.env.local` with API configuration
+- Implemented React useEffect hooks for automatic API polling (5-second intervals)
+- Added real-time state management for metrics and alerts
+- Integrated Live/Demo mode indicator for API connection status
+
+✅ **Fixed Issues:**
+- Removed static mock data - now fetches live data from API
+- Added automatic refresh mechanism (setInterval for metrics and alerts)
+- Implemented proper error handling with fallback states
+- Added environment variable configuration for API endpoints
+- Fixed missing useEffect dependencies for continuous updates
+
+✅ **Testing & Deployment:**
+- Built successfully with Next.js 14.2.35 (`npm run build`)
+- Dev server running with real-time updates (`npm run dev`)
+- GitHub Codespaces deployment verified
+- All API endpoints responding with 200 status codes
 
