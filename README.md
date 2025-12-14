@@ -22,3 +22,14 @@ npm install && pip install -r requirements.txt
 - oumi-agent/train.py - RL training
 - app/page.tsx - Dashboard
 
+## Live Deployments
+
+- **Next.js Dashboard**: https://agentforge-dashboard.vercel.app
+  - Status: Building/Deploying (Connected to GitHub)
+  - Real-time metrics monitoring for AI agents
+
+## Deployment Links
+
+- Dashboard: [agentforge-dashboard.vercel.app](https://agentforge-dashboard.vercel.app)
+- GitHub Repository: [Tejas1024/AgentForge](https://github.com/Tejas1024/AgentForge)
+
