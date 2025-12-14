@@ -26,7 +26,6 @@ npm install && pip install -r requirements.txt
 
 - **Real-time AI Agent Monitoring Dashboard** - Core Project (Real-time Metrics & Alert System)
   - Status: ✅ LIVE - Real-time Dashboard Operational
-  - Development: https://fantastic-orbit-q77pj9p36669-3000.app.github.dev/ (GitHub Codespaces)
 - Features: Real-time metrics polling (5s), Live API integration, Alert system, Multi-agent monitoring
   - Real-time metrics monitoring for AI agents
 
