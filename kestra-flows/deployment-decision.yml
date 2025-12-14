@@ -1,0 +1,35 @@
+id: deployment-decision-agent
+namespace: agents
+version: 1.0.0
+
+tasks:
+  - id: analyze_metrics
+    type: io.kestra.plugin.core.http.Request
+    uri: http://metrics-service/api/data
+    method: GET
+
+  - id: ai_agent_summary
+    type: io.kestra.plugin.scripts.python.Script
+    script: |
+      import json
+      data = {{ outputs.analyze_metrics.body }}
+      print(f"Metrics Summary: {json.dumps(data)}")
+
+  - id: make_decision
+    type: io.kestra.plugin.scripts.python.Script
+    script: |
+      metrics = {{ outputs.ai_agent_summary.stdOut }}
+      if "success" in metrics:
+        print("DEPLOY")
+      else:
+        print("HOLD")
+
+  - id: deploy_if_ready
+    type: io.kestra.plugin.core.trigger.Trigger
+    conditions:
+      - condition: '{{ outputs.make_decision.stdOut == "DEPLOY" }}'
+        then:
+          - id: trigger_deployment
+            type: io.kestra.plugin.core.http.Request
+            uri: http://deploy-service/api/deploy
+            method: POST
