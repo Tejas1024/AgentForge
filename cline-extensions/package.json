@@ -1,0 +1,15 @@
+{
+  "name": "agentforge-cline-extension",
+  "version": "1.0.0",
+  "description": "Cline autonomous coding agent extension for AgentForge",
+  "main": "agent-feature/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cline", "agent", "agentforge", "autonomous"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cline-cli": "^1.0.0"
+  }
+}
